@@ -1,0 +1,47 @@
+﻿@{
+      //ViewBag.Title = "Index";
+}
+<h1>
+  Log Dashboard</h1>
+<p>
+  <img height="100" width="600" alt="48hr activity graph" /></p>
+<h2>
+  All Events</h2>
+<table border="1">
+  <thead>
+    <tr>
+      <th>
+        Occurances
+      </th>
+      <th>
+        Level
+      </th>
+      <th>
+        Type
+      </th>
+      <th>
+        Message
+      </th>
+      <th>
+        Last Time
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    @foreach (var ev in ViewBag.Events)
+    { 
+      <tr onclick='window.location.href="@Url.Content("~/data/" + ViewBag.Token + "/" + ev.Hash)"' style='cursor: pointer;'>
+        <td>@ev.Total
+        </td>
+        <td>@ev.Level
+        </td>
+        <td>@ev.Type
+        </td>
+        <td>@ev.Message
+        </td>
+        <td>@ev.LastTime
+        </td>
+      </tr>
+    }
+  </tbody>
+</table>

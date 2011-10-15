@@ -9,10 +9,13 @@ namespace Canary.Web.Controllers
     public class HomeController : Controller
     {
         //
-        // GET: /Home/
+        // GET: /
 
+        [HttpGet]
         public ActionResult Index()
         {
+            ViewBag.Token = Guid.NewGuid().ToString().Replace("-", "");
+
             return View();
         }
 

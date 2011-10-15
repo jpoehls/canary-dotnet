@@ -27,6 +27,17 @@ namespace Canary.Web
             );
 
             routes.MapRoute(
+                "Data", // Route name
+                "data/{appToken}/{eventHash}", // URL with parameters
+                new
+                {
+                    controller = "Data",
+                    action = "Index",
+                    eventHash = UrlParameter.Optional
+                } // Parameter defaults
+            );
+
+            routes.MapRoute(
                 "Default", // Route name
                 "{controller}/{action}/{appToken}/{eventHash}", // URL with parameters
                 new

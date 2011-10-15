@@ -31,17 +31,21 @@
     err.window_href = window.location.href;
 
     var data = {
-      //time: Date().toUTCString(), // let the server set the time
+      time: (new Date()).toUTCString(), // let the server set the time
       token: Canary._token,
       level: level,
       common: err,
       details: {
         platform: navigator.platform,
-        user_agent: navigator.userAgent
+        user_agent: navigator.userAgent,
+        cookies: [
+          { key: "username", value: "jpoehls" },
+          { key: "company", value: "Acme Inc" }
+        ]
       }
     };
     console.log('logging', data);
-    fireAndForgetJson2('http://localhost:3000/squawk', data);
+    fireAndForgetJson2('{squawk_url}', data);
   }
 
 };

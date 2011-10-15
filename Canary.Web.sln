@@ -3,6 +3,10 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Canary.Web", "src\Canary.Web\Canary.Web.csproj", "{6681A126-1132-43ED-AD8F-FCCC2581722B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Canary", "src\Canary\Canary.csproj", "{0CF302B1-EEE7-41F2-A31C-CB21E84F235F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Canary.Tests", "src\Canary.Tests\Canary.Tests.csproj", "{022C2B5B-349E-4245-9D47-240CC74CCE97}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +17,14 @@ Global
 		{6681A126-1132-43ED-AD8F-FCCC2581722B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6681A126-1132-43ED-AD8F-FCCC2581722B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6681A126-1132-43ED-AD8F-FCCC2581722B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0CF302B1-EEE7-41F2-A31C-CB21E84F235F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0CF302B1-EEE7-41F2-A31C-CB21E84F235F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0CF302B1-EEE7-41F2-A31C-CB21E84F235F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0CF302B1-EEE7-41F2-A31C-CB21E84F235F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{022C2B5B-349E-4245-9D47-240CC74CCE97}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{022C2B5B-349E-4245-9D47-240CC74CCE97}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{022C2B5B-349E-4245-9D47-240CC74CCE97}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{022C2B5B-349E-4245-9D47-240CC74CCE97}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

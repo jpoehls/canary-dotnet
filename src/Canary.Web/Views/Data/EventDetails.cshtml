@@ -1,0 +1,65 @@
+﻿@{
+    //ViewBag.Title = "EventDetails";
+}
+<h1>
+  Event Details</h1>
+<p>
+  <a href="@Url.Content("~/data/" + ViewBag.Token)">Back to the dashboard</a>
+</p>
+<p>
+  <b>Last Occured On:</b> @ViewBag.Event.LastTime</p>
+<h2>
+  Common Info</h2>
+<table class='vert' border="1">
+  <tr>
+    <th>
+      Level
+    </th>
+    <td>@ViewBag.Event.Level
+    </td>
+  </tr>
+  @foreach (var key in ViewBag.Event.Common.Keys)
+  { 
+    <tr>
+      <th>@key
+      </th>
+      <td>@ViewBag.Event.Common[key]
+      </td>
+    </tr>
+  }
+</table>
+<h2>
+  Occurances</h2>
+<table border="1">
+  <tr>
+    <th>
+      Time
+    </th>
+    <th>
+      Details
+    </th>
+  </tr>
+  @foreach (var o in ViewBag.Event.Occurances)
+  { 
+    <tr>
+      <td>@o.TimestampUtc
+      </td>
+      <td>
+        <table class='vert' border="1">
+          @foreach (var key in o.Details)
+          { 
+            <tr>
+              <th>@key
+              </th>
+              <td>@o.Details[key]
+              </td>
+            </tr>
+          }
+        </table>
+      </td>
+    </tr>
+  }
+</table>
+<h2>
+  Raw Event</h2>
+<pre>@ViewBag.EventRaw</pre>

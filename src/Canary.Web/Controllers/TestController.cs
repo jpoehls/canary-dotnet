@@ -9,8 +9,9 @@ namespace Canary.Web.Controllers
     public class TestController : Controller
     {
         //
-        // GET: /Test/
+        // GET: /test/
 
+        [HttpGet]
         public ActionResult Index()
         {
             return View();

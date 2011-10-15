@@ -11,9 +11,21 @@ namespace Canary.Web.Controllers
         //
         // GET: /Data/
 
-        public ActionResult Index(string appToken, string eventHash)
+        public ActionResult Index(string appToken, string eventHash = null)
         {
-            return View();
+            var store = new MongoCanaryStore();
+
+            ViewBag.Token = appToken;
+            ViewBag.Events = store.GetAllEvents(appToken);
+
+            if (eventHash == null)
+            {
+                return View("Dashboard");
+            }
+            else
+            {
+                return View("EventDetails");
+            }
         }
 
     }
