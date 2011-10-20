@@ -37,6 +37,9 @@
     <Reference Include="MongoDB.Driver">
       <HintPath>..\..\packages\mongocsharpdriver.1.2\lib\net35\MongoDB.Driver.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\packages\Newtonsoft.Json.4.0.3\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Web" />
@@ -48,16 +51,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ICanaryStore.cs" />
-    <Compile Include="SquawkEventBsonConverter.cs" />
-    <Compile Include="SquawkEventHasher.cs" />
-    <Compile Include="Web\Models\SquawkEventModel.cs" />
-    <Compile Include="MongoCanaryStore.cs" />
+    <Compile Include="Data\GetAllEventsQuery.cs" />
+    <Compile Include="Data\GetSingleEventQuery.cs" />
+    <Compile Include="Data\InsertEventAction.cs" />
+    <Compile Include="Data\MongoAction.cs" />
+    <Compile Include="SquawkEventLogger.cs" />
+    <Compile Include="SquawkEventParser.cs" />
+    <Compile Include="SquawkEventParserException.cs" />
+    <Compile Include="Event.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Web\UrlHelpers.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Web\Models\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

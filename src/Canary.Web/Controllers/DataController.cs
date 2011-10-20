@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Canary.Data;
 
 namespace Canary.Web.Controllers
 {
@@ -13,17 +14,18 @@ namespace Canary.Web.Controllers
 
         public ActionResult Index(string appToken, string eventHash = null)
         {
-            var store = new MongoCanaryStore();
-
             ViewBag.Token = appToken;
-            ViewBag.Events = store.GetAllEvents(appToken);
 
             if (eventHash == null)
             {
+                var query = new GetAllEventsQuery();
+                ViewBag.Events = query.Execute(appToken);
                 return View("Dashboard");
             }
             else
             {
+                var query = new GetSingleEventQuery();
+                ViewBag.Event = query.Execute(appToken, eventHash);
                 return View("EventDetails");
             }
         }

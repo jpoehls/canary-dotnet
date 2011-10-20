@@ -31,7 +31,7 @@
     @foreach (var ev in ViewBag.Events)
     { 
       <tr onclick='window.location.href="@Url.Content("~/data/" + ViewBag.Token + "/" + ev.Hash)"' style='cursor: pointer;'>
-        <td>@ev.Total
+        <td>@ev.OccuranceCount
         </td>
         <td>@ev.Level
         </td>

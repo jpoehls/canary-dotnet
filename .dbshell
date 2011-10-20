@@ -1,0 +1,18 @@
+use canary
+htl
+help
+db.test_entry.find()
+db.testing.find()
+show collections
+db.testing.find()
+db.events.find()
+db.events.delete()
+db.events.find()
+db.dropCollection("events")
+db.drop("events")
+drop collection events
+db.events.remove()
+db.events.find()
+clear
+cls
+db.events.find()
