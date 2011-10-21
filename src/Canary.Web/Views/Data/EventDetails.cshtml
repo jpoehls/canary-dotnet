@@ -24,8 +24,7 @@
       <th>@key
       </th>
       <td>
-        <pre><script>document.write(JSON.stringify(@Html.Raw(ViewBag.Event.Common[key]), null, '\t'));
-        </script></pre>
+        <code>@Html.Raw(ViewBag.Event.Common[key])</code>
       </td>
     </tr>
   }
@@ -54,8 +53,7 @@
               <th>@key
               </th>
               <td>
-                <pre><script>document.write(JSON.stringify(@Html.Raw(o.Details[key]), null, '\t'));
-                </script></pre>
+                <code>@Html.Raw(o.Details[key])</code>
               </td>
             </tr>
           }
@@ -64,10 +62,3 @@
     </tr>
   }
 </table>
-<h2>
-  Raw Event</h2>
-<pre>
-<script>
-  document.write(JSON.stringify(@Html.Raw(ViewBag.Event.Raw), null, '\t'));
-</script>
-</pre>

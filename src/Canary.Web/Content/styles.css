@@ -2,6 +2,7 @@ body{background:#222;font-family:verdana, arial;font-size:80%;color:#fff;}
 img{border:0;}
 h1{margin:0;}
 pre{font-size: 1.3em; overflow-x: scroll;}
+code{font-size: 1.3em;}
 
 table.vert th { text-align: right; }
 
